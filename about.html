@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Nicola Kunz - Mechanical Engineering Portfolio</title>
+  <meta name="description" content="About Nicola Kunz - Mechanical engineering graduate student, medical devices, mechatronics, Northeastern University, Volpi USA internships.">
+  <meta name="keywords" content="Nicola Kunz, about, mechanical engineering, Northeastern, Volpi, EXP Makerspace">
+  <meta property="og:title" content="About Nicola Kunz">
+  <meta property="og:description" content="Mechanical engineering graduate student passionate about medical devices and mechatronics.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-logo">Nicola Kunz</a>
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>About Me</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <!-- Professional photo placeholder (circular) -->
+        <div class="about-photo" role="img" aria-label="Professional photo of Nicola Kunz">headshot.jpg<br>Photo Placeholder</div>
+
+        <div class="about-bio">
+          <p>I'm a mechanical engineering graduate student passionate about medical devices that help improve patients' lives. My father inspired me to pursue this field, and I'm driven by the opportunity to create technology that makes a real difference in healthcare.</p>
+          <p>My background combines precision engineering, robotics, and hands-on manufacturing experience. Through three internships at Volpi USA, I gained expertise in clinical device development, CAD design, and quality systems. I recently won first place at the Nordic Semiconductor IoT Hackathon for a patient monitoring system.</p>
+          <p>Currently, I supervise advanced manufacturing operations at Northeastern University's EXP Makerspace, overseeing CNC, waterjet, and welding equipment while training students on technical systems. I'm pursuing opportunities in medical device development where I can apply my mechatronics background to create innovative healthcare solutions.</p>
+        </div>
+
+        <div class="about-section">
+          <h2>Education</h2>
+          <div class="education-item">
+            <h3>Northeastern University</h3>
+            <p class="meta">Master of Science in Mechanical Engineering (Mechatronics) · Expected May 2027 · Boston, MA</p>
+            <p>Relevant Courses: Robot Mechanics and Controls, Control System Engineering, Regulatory and Quality Aspects of Medical Device Design</p>
+          </div>
+          <div class="education-item">
+            <h3>Rochester Institute of Technology</h3>
+            <p class="meta">Bachelor of Science in Electrical Mechanical Engineering Technology · December 2023 · Rochester, NY</p>
+            <p>Relevant Courses: Quality Engineering, Welding, Automation Control Systems, Machine Tools Lab</p>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h2>Experience Highlights</h2>
+          <ul>
+            <li>EXP Makerspace Student Supervisor (Current)</li>
+            <li>Engineering Intern at Volpi USA (3 Co-Ops)</li>
+            <li>1st Place - Nordic Semiconductor IoT Hackathon</li>
+            <li>Swiss Armed Forces Service</li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skills-category">
+              <h4>CAD & Design</h4>
+              <ul>
+                <li>SolidWorks (parts, assemblies, GD&T drawings)</li>
+                <li>3D Printing (setup, orientation, maintenance)</li>
+                <li>Technical Documentation</li>
+              </ul>
+            </div>
+            <div class="skills-category">
+              <h4>Manufacturing & Prototyping</h4>
+              <ul>
+                <li>CNC Machining</li>
+                <li>Waterjet Cutting</li>
+                <li>TIG/MIG Welding</li>
+                <li>Precision Fabrication</li>
+                <li>Quality Control</li>
+              </ul>
+            </div>
+            <div class="skills-category">
+              <h4>Engineering</h4>
+              <ul>
+                <li>Mechanical Design</li>
+                <li>Robotics & Mechatronics</li>
+                <li>Control Systems</li>
+                <li>Sensor Integration</li>
+                <li>Testing & Validation</li>
+              </ul>
+            </div>
+            <div class="skills-category">
+              <h4>Leadership</h4>
+              <ul>
+                <li>Team Supervision</li>
+                <li>Equipment Training</li>
+                <li>Cross-functional Collaboration</li>
+                <li>Problem Solving</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-connect">
+          <div class="resume-download">
+            <a href="assets/Nicola_Kunz_Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download Resume (PDF)</a>
+          </div>
+          <h2>Connect</h2>
+          <div class="connect-buttons">
+            <a href="https://linkedin.com/in/nicolakunz" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:Kunz.n@northeastern.edu" class="btn btn-secondary">Email</a>
+            <a href="https://github.com/NicolaKunz" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Nicola Kunz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('is-open');
+      this.setAttribute('aria-label', document.querySelector('.nav-menu').classList.contains('is-open') ? 'Close menu' : 'Open menu');
+      this.textContent = document.querySelector('.nav-menu').classList.contains('is-open') ? '✕' : '☰';
+    });
+  </script>
+</body>
+</html>

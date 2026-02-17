@@ -1,0 +1,935 @@
+/* ==========================================================================
+   Nicola Kunz - Engineering Portfolio
+   Clean, minimal, professional | Navy accent, system fonts
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Variables
+   -------------------------------------------------------------------------- */
+:root {
+  --color-primary: #1e3a8a;
+  --color-primary-hover: #3b82f6;
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f3f4f6;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --container-max: 1200px;
+  --section-padding: 5rem;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 4px 12px rgba(30, 58, 138, 0.15);
+  --transition: 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Layout
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* --------------------------------------------------------------------------
+   Navigation - Sticky header
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.site-logo:hover {
+  color: var(--color-primary-hover);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--color-primary);
+}
+
+/* Hamburger - hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.nav-toggle:focus {
+  outline: 2px solid var(--color-primary);
+}
+
+/* Mobile menu */
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--color-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 1.5rem 1.5rem;
+    gap: 1rem;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform var(--transition);
+  }
+
+  .nav-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-menu a {
+    font-size: 1.1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-border);
+}
+
+/* --------------------------------------------------------------------------
+   Hero (Homepage)
+   -------------------------------------------------------------------------- */
+.hero {
+  padding: 4rem 0 5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--color-text);
+}
+
+.hero .subheading {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.hero .intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   Page title (inner pages)
+   -------------------------------------------------------------------------- */
+.page-hero {
+  padding: 3rem 0 2rem;
+  text-align: center;
+  background: var(--color-bg-secondary);
+}
+
+.page-hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.page-hero .lead {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Project cards grid
+   -------------------------------------------------------------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--transition), transform var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.project-card-image {
+  aspect-ratio: 16 / 10;
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.project-card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.project-card p {
+  margin: 0 0 1rem;
+  color: var(--color-text-muted);
+  flex: 1;
+}
+
+.project-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.project-date {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Projects page - larger cards optional */
+.projects-grid.large-cards .project-card-image {
+  aspect-ratio: 16 / 9;
+}
+
+/* --------------------------------------------------------------------------
+   Quick facts
+   -------------------------------------------------------------------------- */
+.quick-facts {
+  background: var(--color-bg-secondary);
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .facts-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.fact-item {
+  padding: 1.5rem 1rem;
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* --------------------------------------------------------------------------
+   Individual project page template
+   -------------------------------------------------------------------------- */
+.project-hero-image {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.project-title-block {
+  margin-bottom: 2rem;
+}
+
+.project-title-block h1 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin: 0 0 0.25rem;
+}
+
+.project-title-block .subtitle {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.project-title-block .date {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.project-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.stat-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-section {
+  margin-bottom: 2.5rem;
+}
+
+.project-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.project-section p {
+  margin: 0 0 1rem;
+}
+
+.project-section ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.gallery-item {
+  aspect-ratio: 4 / 3;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Two-column gallery with captions (stacks on small screens) */
+.project-gallery.two-column {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .project-gallery.two-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-gallery.two-column .gallery-item {
+  aspect-ratio: auto;
+  background: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-gallery.two-column img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.project-gallery.two-column .caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Slightly smaller image variant for wide boards (e.g. nRF board) */
+.gallery-img-nrf-board {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slightly smaller image variant for presenting image */
+.gallery-img-present {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Rotate image 90deg counter-clockwise (for tall CAD render) */
+.gallery-img-rotate-ccw {
+  transform: rotate(-90deg);
+  transform-origin: center center;
+  display: block;
+  max-width: 80%;
+}
+
+/* Wrapper for rotated image to control spacing */
+.rotated-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  min-height: 200px;
+  padding-bottom: 2rem;
+}
+
+/* Ensure gallery item with rotated image has enough vertical space for caption */
+.project-gallery.two-column .gallery-item-rotated {
+  min-height: auto;
+  padding-bottom: 1rem;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-gallery.two-column .gallery-item-rotated .caption {
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+/* Image lightbox (click-to-zoom gallery) */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 1000;
+}
+
+.image-lightbox.is-open {
+  display: flex;
+}
+
+.image-lightbox-inner {
+  max-width: 960px;
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.image-lightbox-close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.image-lightbox-body {
+  background: #0b1220;
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.image-lightbox-nav {
+  background: transparent;
+  border: none;
+  color: #e5e7eb;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.image-lightbox-nav:hover {
+  color: #ffffff;
+}
+
+.image-lightbox-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.image-lightbox-image {
+  max-width: 100%;
+  max-height: min(70vh, 700px);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.6);
+}
+
+.image-lightbox-caption {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .image-lightbox-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .image-lightbox-nav {
+    order: 1;
+  }
+
+  .image-lightbox-media {
+    order: 0;
+  }
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-tag {
+  padding: 0.35rem 0.75rem;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.project-nav a {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   About page
+   -------------------------------------------------------------------------- */
+.about-photo {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.about-bio {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.about-bio p {
+  margin: 0 0 1rem;
+}
+
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  color: var(--color-primary);
+}
+
+.education-item,
+.experience-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.education-item:last-child,
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.education-item h3,
+.experience-item h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem;
+}
+
+.education-item .meta,
+.experience-item .meta {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skills-category h4 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: var(--color-text);
+}
+
+.skills-category ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-category li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skills-category li:last-child {
+  border-bottom: none;
+}
+
+.about-connect {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.resume-download {
+  margin-bottom: 2rem;
+}
+
+.connect-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.connect-buttons .btn {
+  min-width: 140px;
+}
+
+/* --------------------------------------------------------------------------
+   Contact page
+   -------------------------------------------------------------------------- */
+.contact-intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+.contact-info-item a {
+  font-weight: 500;
+}
+
+.contact-cta {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+}
+
+/* Optional contact form */
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Utility
+   -------------------------------------------------------------------------- */
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.section-heading + p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Print styles
+   -------------------------------------------------------------------------- */
+@media print {
+  .site-header,
+  .nav-toggle,
+  .hero-buttons,
+  .btn,
+  .project-nav,
+  .connect-buttons,
+  .resume-download {
+    display: none !important;
+  }
+
+  body {
+    font-size: 11pt;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #666;
+  }
+
+  .nav-menu {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    box-shadow: none;
+  }
+}

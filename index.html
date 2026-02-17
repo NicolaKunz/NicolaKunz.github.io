@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicola Kunz | Mechanical Engineering | Mechatronics | Medical Devices</title>
+  <meta name="description" content="Portfolio of Nicola Kunz - Mechanical engineering graduate student specializing in mechatronics and medical devices. Northeastern University.">
+  <meta name="keywords" content="Nicola Kunz, mechanical engineering, mechatronics, medical devices, Northeastern University, robotics">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nicola Kunz - Mechanical Engineering Portfolio">
+  <meta property="og:description" content="Master's student passionate about medical devices. Precision engineering, robotics, and hands-on manufacturing.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sticky navigation -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-logo">Nicola Kunz</a>
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Nicola Kunz</h1>
+        <p class="subheading">Mechanical Engineering | Mechatronics | Medical Devices</p>
+        <p class="intro">Master's student at Northeastern University passionate about medical devices that help improve patients' lives. Combining precision engineering, robotics, and hands-on manufacturing experience to create innovative healthcare solutions.</p>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured projects -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-heading">Featured Projects</h2>
+        <p>A selection of my engineering work spanning medical devices, robotics, and precision manufacturing.</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-card-image">
+              <img src="images/project-monitoring-5.jpg" alt="Group photo from the Nordic Semiconductor IoT Hackathon">
+            </div>
+            <div class="project-card-body">
+              <h3>Patient Monitoring System - 1st Place Winner</h3>
+              <p>IoT-based patient monitoring with real-time sensor integration.</p>
+              <div class="project-card-footer">
+                <a href="project-patient-monitoring.html" class="btn btn-primary">Learn More</a>
+                <span class="project-date">Completed 2026</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card-image">
+              <img src="images/project-car-8.jpg" alt="Factory 5 Mk4 Roadster front three-quarter view">
+            </div>
+            <div class="project-card-body">
+              <h3>Factory 5 Mk4 Roadster</h3>
+              <p>Complete automotive build with custom electrical systems.</p>
+              <div class="project-card-footer">
+                <a href="project-kit-car.html" class="btn btn-primary">Learn More</a>
+                <span class="project-date">Completed May 2020</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick facts -->
+    <section class="quick-facts">
+      <div class="container">
+        <h2 class="section-heading">Quick Facts</h2>
+        <div class="facts-grid">
+          <div class="fact-item">3 Engineering Internships</div>
+          <div class="fact-item">1st Place Hackathon Winner</div>
+          <div class="fact-item">Equipment Supervisor</div>
+          <div class="fact-item">Master's in Mechatronics</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Nicola Kunz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Mobile menu toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('is-open');
+      this.setAttribute('aria-label', document.querySelector('.nav-menu').classList.contains('is-open') ? 'Close menu' : 'Open menu');
+      this.textContent = document.querySelector('.nav-menu').classList.contains('is-open') ? '✕' : '☰';
+    });
+  </script>
+</body>
+</html>

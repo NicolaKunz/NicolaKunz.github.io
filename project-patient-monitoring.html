@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Connection - Patient Monitoring System | Nicola Kunz</title>
+  <meta name="description" content="1st Place Winner - Nordic Semiconductor IoT Hackathon. IoT-based patient monitoring with real-time sensor integration.">
+  <meta property="og:title" content="Patient Monitoring System | Nicola Kunz">
+  <meta property="og:description" content="1st Place at Nordic Semiconductor IoT Hackathon. Vital sign sensors and local alert system.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-logo">Nicola Kunz</a>
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Hero image -->
+      <div class="project-hero-image">
+        <img src="images/project-monitoring-5.jpg" alt="Group of participants at the Nordic Semiconductor IoT Hackathon">
+      </div>
+
+      <div class="project-title-block">
+        <h1>Healthy Connection - Patient Monitoring System</h1>
+        <p class="subtitle">1st Place Winner - Nordic Semiconductor IoT Hackathon</p>
+        <p class="date">January 2026</p>
+        <div class="project-stats">
+          <span class="stat-badge">🏆 1st Place Winner</span>
+          <span class="stat-badge">⏱️ Built in 48 Hours</span>
+          <span class="stat-badge">🏥 Multi-Patient Monitoring</span>
+          <span class="stat-badge">💰 Affordable Healthcare IoT</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Project Resources</h2>
+        <ul>
+          <li>🔗 Complete project details: <a href="https://devpost.com/software/healthy-connection" target="_blank" rel="noopener">Healthy Connection on Devpost</a></li>
+          <li>📊 Live dashboard demo (simulated data): <a href="https://healthy-connection.juancerquera.com/" target="_blank" rel="noopener">healthy-connection.juancerquera.com</a></li>
+          <li>🎥 Technical demonstration &amp; pitch: <a href="https://www.youtube.com/watch?v=KAiTHvhvM-I" target="_blank" rel="noopener">Healthy Connection video overview</a></li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>Won first place at the Nordic Semiconductor IoT Hackathon by developing an affordable, scalable patient monitoring system. Healthy Connection addresses a critical healthcare challenge: nurses monitoring 4–10+ patients simultaneously struggle to detect vital changes quickly. Current systems cost $10K–$50K+ per bed or lack immediate local alerts. Our solution provides both bedside awareness and centralized monitoring at a fraction of enterprise costs, ensuring no critical moment goes unnoticed.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Inspiration</h2>
+        <p>Healthcare workers are often stretched thin, monitoring numerous patients simultaneously. When a patient's condition deteriorates, every second counts. We recognized that combining affordable hardware with intelligent alert systems could save lives while reducing healthcare infrastructure costs. Our goal was to create a system that provides both immediate bedside feedback for nurses and centralized oversight for care teams.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>What It Does</h2>
+        <p>Healthy Connection monitors patient vitals in real time using ECG, temperature, and humidity sensors. Color-coded LEDs at each bedside provide instant visual feedback: green (vitals safe), yellow (attention needed), red (critical alert), and blue (system connected). Multiple patient monitoring units connect wirelessly via Bluetooth to a central hub built on the nRF7002 DK board, which transmits all data to our cloud-based web dashboard.</p>
+        <p>Healthcare providers can monitor all patients simultaneously, view real-time vital signs, track trends, and receive instant alerts when thresholds are exceeded. Patient IDs are entered and linked to individual profiles through the web interface. The architecture supports unlimited patient units connecting to one hub, enabling scalable deployment at significantly lower cost than traditional systems.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Technical Significance</h2>
+        <p>This project sits at the intersection of embedded systems, IoT architecture, medical device development, and user-centered design. It demonstrates the ability to work across hardware and software domains, rapidly prototype with unfamiliar technology, debug complex technical challenges (voltage compatibility, wireless communication, signal processing), and create solutions that address real-world healthcare problems with meaningful cost impact.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Technologies Used</h2>
+        <ul>
+          <li><strong>Hardware:</strong> Nordic nRF7002 DK, ECG sensors, temperature sensors, humidity sensors, 4-color LED indicators.</li>
+          <li><strong>Wireless:</strong> Bluetooth Low Energy (patient units to hub), Wi‑Fi 2.4&nbsp;GHz (hub to cloud).</li>
+          <li><strong>Power:</strong> Reconfigured on-board regulators from 1.8&nbsp;V to 3.3&nbsp;V for sensor compatibility.</li>
+          <li><strong>Backend:</strong> Cloud hosting with RESTful API architecture and secure data storage.</li>
+          <li><strong>Frontend:</strong> Responsive web dashboard with real-time updates, patient profile management, and alert notifications.</li>
+          <li><strong>Development:</strong> Nordic SDK, embedded C programming, signal filtering algorithms, and modern web technologies.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>How We Built It</h2>
+        <h3>Hardware Architecture</h3>
+        <ul>
+          <li><strong>Patient Monitoring Units:</strong> nRF7002 DK boards with custom circuits integrating ECG sensors, temperature sensors, humidity sensors, and 4-color LED arrays (green, yellow, red, blue).</li>
+          <li><strong>Central Hub:</strong> nRF7002 DK configured as a Bluetooth receiver and Wi‑Fi gateway.</li>
+          <li><strong>Wireless Communication:</strong> Bluetooth Low Energy between patient units and hub; Wi‑Fi from hub to cloud.</li>
+          <li><strong>Power Management:</strong> Designed for continuous operation with consideration for battery-backed deployment.</li>
+        </ul>
+
+        <h3>Software Stack</h3>
+        <ul>
+          <li><strong>Cloud Backend:</strong> Secure data storage with real-time processing of incoming sensor streams.</li>
+          <li><strong>RESTful APIs:</strong> Bi-directional communication for sensor data upload and alert delivery.</li>
+          <li><strong>Web Dashboard:</strong> Responsive interface with live vital sign visualization, patient management, configurable alert thresholds, and notifications.</li>
+          <li><strong>Data Flow:</strong> End-to-end pipeline from sensors → patient unit → central hub → cloud → web dashboard.</li>
+        </ul>
+
+        <h3>Integration &amp; Testing</h3>
+        <ul>
+          <li>Tested scalability with multiple simultaneous patient connections.</li>
+          <li>Validated data transmission reliability and latency across Bluetooth and Wi‑Fi links.</li>
+          <li>Configured wireless protocols for stable operation in hospital-like RF environments.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Team &amp; Collaboration</h2>
+        <p>Healthy Connection was built in collaboration with Juan Cerquera over an intense 48‑hour hackathon period. Our responsibilities spanned hardware integration, sensor calibration, wireless protocol configuration (Bluetooth and Wi‑Fi), cloud backend development, web dashboard design with real-time data visualization, and end-to-end system testing. The project demonstrates our ability to rapidly learn new technologies, work effectively under extreme time pressure, and deliver a functional prototype through collaborative trial-and-error problem solving.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Challenges We Overcame</h2>
+        <p><strong>Voltage Compatibility Crisis:</strong> The nRF7002 DK board operates at 1.8&nbsp;V by default, but our sensors required 3.3&nbsp;V. We had to carefully reconfigure the board's voltage output to ensure proper sensor operation without damaging sensitive components—a critical early obstacle that required understanding hardware specifications and power management.</p>
+        <p><strong>Wi‑Fi Connection Stability:</strong> Establishing reliable Wi‑Fi connection from the central hub to cloud services required extensive debugging. We struggled with intermittent connectivity, configuration challenges, and ensuring data transmission wouldn't drop during critical moments. Through persistence and systematic troubleshooting, we achieved stable communication.</p>
+        <p><strong>Bluetooth Device-to-Device Communication:</strong> Setting up Bluetooth connections between patient monitoring units and the central hub involved troubleshooting pairing protocols, maintaining reliable connections, and handling multiple simultaneous devices. We ensured patient units could seamlessly connect without manual intervention for each device.</p>
+        <p><strong>ECG Signal Processing Complexity:</strong> Obtaining clean, accurate ECG readings proved challenging due to electrical noise and signal quality issues. We implemented signal filtering algorithms to clean the data and established proper threshold detection for heart rate monitoring, balancing sensitivity with noise rejection.</p>
+        <p><strong>Sensor Integration and Protocols:</strong> Developing code for temperature and humidity sensors required understanding sensor-specific communication protocols, timing requirements, and data formatting. Integrating multiple sensor streams into unified patient profiles demanded careful embedded and backend software architecture.</p>
+        <p><strong>Learning Curve with New Hardware:</strong> Neither team member had prior experience with the nRF7002 DK platform. We learned the Nordic SDK, wireless protocols, and board configuration entirely during the 48‑hour hackathon through documentation, experimentation, and rapid iteration.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Results &amp; Impact</h2>
+        <ul>
+          <li>🏆 First place winner among all Nordic Semiconductor IoT Hackathon teams.</li>
+          <li>📰 Featured on Nordic Semiconductor's official website as an innovative healthcare IoT solution.</li>
+          <li>💡 Demonstrated a viable low-cost alternative to enterprise patient monitoring (typically $10K–$50K+ per bed).</li>
+          <li>📊 Proved scalability with one hub supporting multiple patient units simultaneously.</li>
+          <li>🏥 Addressed a real healthcare infrastructure challenge with a practical, affordable system architecture.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Skills Used</h2>
+        <div class="project-skills">
+          <span class="skill-tag">IoT Architecture</span>
+          <span class="skill-tag">Embedded Systems</span>
+          <span class="skill-tag">Nordic nRF7002 DK</span>
+          <span class="skill-tag">Bluetooth Low Energy</span>
+          <span class="skill-tag">Wi‑Fi Communication</span>
+          <span class="skill-tag">ECG Sensor Integration</span>
+          <span class="skill-tag">Signal Processing</span>
+          <span class="skill-tag">Temperature &amp; Humidity Sensors</span>
+          <span class="skill-tag">Cloud Backend Development</span>
+          <span class="skill-tag">RESTful API Design</span>
+          <span class="skill-tag">Real-time Dashboards</span>
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">Hardware Circuit Design</span>
+          <span class="skill-tag">Wireless Protocol Configuration</span>
+          <span class="skill-tag">Medical Device Development</span>
+          <span class="skill-tag">Rapid Prototyping</span>
+          <span class="skill-tag">Team Collaboration</span>
+          <span class="skill-tag">Debugging Under Pressure</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Image Gallery</h2>
+        <div class="project-gallery two-column">
+          <div class="gallery-item">
+            <img src="images/project-monitoring-5.jpg" alt="Group photo of hackathon participants at Northeastern University">
+            <p class="caption">Group photo of hackathon participants at Northeastern University.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-monitoring-4.jpeg" class="gallery-img-nrf-board" alt="Close-up of the Nordic nRF7002 DK development board used in the project">
+            <p class="caption">Close-up of the Nordic nRF7002 DK development board used for wireless connectivity and sensor interfacing.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-monitoring-1.jpeg" alt="Physical build of the patient monitoring hardware on the workbench">
+            <p class="caption">Physical build of the patient monitoring hardware on the workbench with sensors and development boards.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-monitoring-2.jpg" alt="Team members collaborating on the patient monitoring prototype during the hackathon">
+            <p class="caption">Working together during the hackathon to integrate sensors and debug the prototype.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-monitoring-3.jpg" class="gallery-img-present" alt="Presenting the Healthy Connection system to judges and participants">
+            <p class="caption">Presenting the Healthy Connection patient monitoring system to judges and participants.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-monitoring-7.jpg" alt="Main dashboard overview showing patient status distribution">
+            <p class="caption">Main dashboard overview showing system status, patient counts, and alert distribution.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-monitoring-6.jpg" alt="Individual patient view with detailed vital signs">
+            <p class="caption">Individual patient dashboard view with detailed vital signs and recent alert history.</p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="project-nav" aria-label="Project navigation">
+        <a href="projects.html">← Back to Projects</a>
+        <a href="project-robotic-gripper.html">Next Project →</a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Image lightbox for gallery -->
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+    <div class="image-lightbox-inner" role="dialog" aria-modal="true" aria-label="Expanded gallery image">
+      <button class="image-lightbox-close" type="button" aria-label="Close image viewer">✕</button>
+      <div class="image-lightbox-body">
+        <button class="image-lightbox-nav image-lightbox-prev" type="button" aria-label="Previous image">‹</button>
+        <div class="image-lightbox-media">
+          <img class="image-lightbox-image" src="" alt="">
+          <p class="image-lightbox-caption"></p>
+        </div>
+        <button class="image-lightbox-nav image-lightbox-next" type="button" aria-label="Next image">›</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Nicola Kunz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year and mobile nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('is-open');
+      this.setAttribute(
+        'aria-label',
+        document.querySelector('.nav-menu').classList.contains('is-open') ? 'Close menu' : 'Open menu'
+      );
+      this.textContent = document.querySelector('.nav-menu').classList.contains('is-open') ? '✕' : '☰';
+    });
+
+    // Image lightbox for gallery
+    (function() {
+      const galleryImages = Array.from(document.querySelectorAll('.project-gallery img'));
+      const lightbox = document.getElementById('image-lightbox');
+      if (!galleryImages.length || !lightbox) return;
+
+      const lightboxImage = lightbox.querySelector('.image-lightbox-image');
+      const lightboxCaption = lightbox.querySelector('.image-lightbox-caption');
+      const closeButton = lightbox.querySelector('.image-lightbox-close');
+      const prevButton = lightbox.querySelector('.image-lightbox-prev');
+      const nextButton = lightbox.querySelector('.image-lightbox-next');
+
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        const img = galleryImages[currentIndex];
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt || '';
+        const captionEl = img.closest('.gallery-item') && img.closest('.gallery-item').querySelector('.caption');
+        lightboxCaption.textContent = captionEl ? captionEl.textContent : '';
+
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function showNext(delta) {
+        const total = galleryImages.length;
+        currentIndex = (currentIndex + delta + total) % total;
+        openLightbox(currentIndex);
+      }
+
+      galleryImages.forEach((img, index) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => openLightbox(index));
+      });
+
+      closeButton.addEventListener('click', closeLightbox);
+      prevButton.addEventListener('click', () => showNext(-1));
+      nextButton.addEventListener('click', () => showNext(1));
+
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (event.key === 'Escape') {
+          closeLightbox();
+        } else if (event.key === 'ArrowRight') {
+          showNext(1);
+        } else if (event.key === 'ArrowLeft') {
+          showNext(-1);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

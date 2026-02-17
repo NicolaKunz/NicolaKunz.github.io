@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forward Dynamic Simulation of Planar 3R Robot Arm | Nicola Kunz</title>
+  <meta name="description" content="MATLAB-based forward dynamic simulation of a 3R planar robot arm using Lagrangian mechanics to analyze nonlinear and chaotic motion.">
+  <meta property="og:title" content="Forward Dynamic Simulation of Planar 3R Robot Arm | Nicola Kunz">
+  <meta property="og:description" content="3-link pendulum dynamics in MATLAB with Lagrangian formulation, energy checks, and chaotic motion analysis.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-logo">Nicola Kunz</a>
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="project-hero-image">Image Placeholder - 3R pendulum dynamics simulation</div>
+
+      <div class="project-title-block">
+        <h1>Forward Dynamic Simulation of Planar 3R Robot Arm</h1>
+        <p class="subtitle">MATLAB-Based Dynamics and Chaotic Motion Analysis</p>
+        <p class="date">Fall 2025</p>
+        <div class="project-stats">
+          <span class="stat-badge">💻 MATLAB Simulation</span>
+          <span class="stat-badge">🎯 Lagrangian Mechanics</span>
+          <span class="stat-badge">📊 Dynamic Analysis</span>
+          <span class="stat-badge">🌀 Chaotic Behavior</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>Developed MATLAB simulation of a 3-link revolute (3R) planar robot arm falling under gravity to study nonlinear dynamics and chaotic motion. The project involved deriving complete equations of motion using Lagrangian mechanics, implementing numerical solvers, and analyzing the complex coupling effects between joints that produce chaotic behavior.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Challenge</h2>
+        <p>Multi-link pendulum systems exhibit complex chaotic motion due to strong coupling between joints. Predicting the behavior of a 3R arm falling from an extended horizontal position requires solving coupled nonlinear differential equations. The challenge was to correctly derive the mass matrix, Coriolis matrix, and gravity vector, then implement a robust numerical simulation that accurately captures the physical dynamics.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Solution</h2>
+        <p>Derived complete equations of motion using Lagrangian mechanics, computing configuration-dependent mass matrix (3×3), velocity-dependent Coriolis matrix (3×3), and gravitational torques. Implemented forward dynamics simulation in MATLAB using the ODE45 solver to numerically integrate joint accelerations and predict system behavior. Validated results through energy conservation checks and physical intuition—debugging revealed critical sign errors in the mass matrix through physically impossible behaviors during simulation.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Technical Details</h2>
+        <h3>Mathematical Framework</h3>
+        <ul>
+          <li>Lagrangian mechanics formulation for a 3-DOF planar pendulum system</li>
+          <li><strong>Mass Matrix (M):</strong> Configuration-dependent inertia properties (3×3, symmetric, positive-definite)</li>
+          <li><strong>Coriolis Matrix (C):</strong> Velocity-dependent forces computed using Christoffel symbols</li>
+          <li><strong>Gravity Vector (G):</strong> Joint-dependent gravitational torques</li>
+          <li><strong>Energy Conservation:</strong> Kinetic energy \(T = \tfrac{1}{2}\dot{\theta}^\mathsf{T} M(\theta)\dot{\theta}\) and potential energy validation</li>
+        </ul>
+
+        <h3>System Parameters</h3>
+        <ul>
+          <li><strong>Link lengths:</strong> L₁ = L₂ = L₃ = 1 m</li>
+          <li><strong>Masses:</strong> M₁ = 3 kg, M₂ = 2 kg, M₃ = 1 kg</li>
+          <li><strong>Gravity:</strong> g = -9.81 m/s²</li>
+          <li><strong>Initial condition:</strong> Arm extended horizontally to the right</li>
+          <li><strong>Time span:</strong> 60 seconds of simulated motion</li>
+        </ul>
+
+        <h3>Implementation</h3>
+        <ul>
+          <li><strong>Platform:</strong> MATLAB</li>
+          <li><strong>ODE Solver:</strong> ODE45 (Runge–Kutta 4th/5th order adaptive)</li>
+          <li><strong>State variables:</strong> Joint angles (θ₁, θ₂, θ₃) and velocities (θ̇₁, θ̇₂, θ̇₃)</li>
+          <li><strong>Forward dynamics:</strong> \(\ddot{\theta} = M(\theta)^{-1}\big(G(\theta) - C(\theta,\dot{\theta})\dot{\theta}\big)\)</li>
+          <li><strong>Visualization:</strong> Animated robot arm motion and trajectory plots</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Key Observations</h2>
+        <ul>
+          <li>Chaotic motion emerges from fully deterministic equations of motion.</li>
+          <li>Strong coupling between joints creates a pronounced “whipping” motion at the lightest mass M₃.</li>
+          <li>Lighter end mass amplifies chaotic effects through acceleration coupling.</li>
+          <li>Energy conservation trends validate the numerical simulation’s accuracy.</li>
+          <li>Physical intuition was essential for debugging—sign errors in the mass matrix produced impossible motions that revealed mistakes.</li>
+          <li>The system’s long-term behavior is impossible to predict through reasoning alone; simulation is required.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Results</h2>
+        <ul>
+          <li>✅ Successfully simulated 3R arm dynamics under gravity</li>
+          <li>✅ Demonstrated chaotic behavior emerging from joint coupling</li>
+          <li>✅ Validated results through energy conservation checks</li>
+          <li>✅ Identified and corrected numerical errors through physical reasoning</li>
+          <li>✅ Created animated visualization of complex motion</li>
+          <li>📹 Simulation video: <a href="https://youtu.be/buUVGLTktPc" target="_blank" rel="noopener">https://youtu.be/buUVGLTktPc</a></li>
+          <li>📊 Generated trajectory plots and state-space analysis</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Learning Outcomes</h2>
+        <ul>
+          <li>Mastered Lagrangian mechanics for multi-body, multi-DOF systems.</li>
+          <li>Developed MATLAB programming skills for dynamics simulation.</li>
+          <li>Strengthened understanding of numerical integration techniques and ODE solvers.</li>
+          <li>Learned to debug simulations using physical validation and energy checks.</li>
+          <li>Gained intuition for how multi-DOF systems can exhibit chaotic motion despite deterministic equations.</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Image & Media Gallery</h2>
+        <div class="project-gallery">
+          <div class="gallery-item">pendulum-sim-1.gif<br>Simulation animation of planar 3R arm falling</div>
+          <div class="gallery-item">pendulum-sim-2.jpg<br>MATLAB simulation screenshot at t = 2.38 s</div>
+          <div class="gallery-item">pendulum-sim-3.jpg<br>Hand calculations for Lagrangian derivation</div>
+          <div class="gallery-item">pendulum-sim-4.jpg<br>Energy conservation plots over time</div>
+          <div class="gallery-item">pendulum-sim-5.jpg<br>Joint angle trajectory visualization</div>
+          <div class="gallery-item">pendulum-sim-6.jpg<br>MATLAB code overview</div>
+          <div class="gallery-item">pendulum-sim-7.jpg<br>Additional trajectory or state-space plots</div>
+          <div class="gallery-item">YouTube<br>Embedded video: https://youtu.be/buUVGLTktPc</div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Skills Used</h2>
+        <div class="project-skills">
+          <span class="skill-tag">MATLAB Programming</span>
+          <span class="skill-tag">Lagrangian Mechanics</span>
+          <span class="skill-tag">Dynamics Analysis</span>
+          <span class="skill-tag">Numerical Methods</span>
+          <span class="skill-tag">ODE Solvers</span>
+          <span class="skill-tag">System Modeling</span>
+          <span class="skill-tag">Chaotic Systems</span>
+          <span class="skill-tag">Energy Conservation</span>
+          <span class="skill-tag">Algorithm Development</span>
+          <span class="skill-tag">Debugging</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Technical Documentation</h2>
+        <p>Prepared complete derivations of the mass matrix, Coriolis matrix, and gravity vector, supported by hand calculations for verification. MATLAB code is extensively commented to explain each step of the formulation and simulation workflow. A full project report, including equations, simulation results, and discussion of chaotic behavior, is available upon request.</p>
+      </div>
+
+      <nav class="project-nav" aria-label="Project navigation">
+        <a href="project-kit-car.html">← Previous Project</a>
+        <a href="projects.html">Back to Projects</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Nicola Kunz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('is-open');
+      this.setAttribute('aria-label', document.querySelector('.nav-menu').classList.contains('is-open') ? 'Close menu' : 'Open menu');
+      this.textContent = document.querySelector('.nav-menu').classList.contains('is-open') ? '✕' : '☰';
+    });
+  </script>
+</body>
+</html>
+

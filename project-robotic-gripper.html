@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variable-Grasping-Mode Underactuated Robotic Hand | Nicola Kunz</title>
+  <meta name="description" content="Dual-mode underactuated robotic hand for sub-1mm and larger objects. Asymmetric fingers, passive mode switching, kinematic analysis.">
+  <meta property="og:title" content="Variable-Grasping-Mode Underactuated Robotic Hand | Nicola Kunz">
+  <meta property="og:description" content="Dual-mode gripper with asymmetric fingers, passive mode switching, and sub-1mm manipulation capability.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-logo">Nicola Kunz</a>
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="project-hero-image">
+        <img src="images/project-gripper-2.jpg" alt="Variable-grasping-mode underactuated robotic hand - CAD model">
+      </div>
+
+      <div class="project-title-block">
+        <h1>Variable-Grasping-Mode Underactuated Robotic Hand</h1>
+        <p class="subtitle">Dual-Mode Gripper for Multi-Scale Object Manipulation</p>
+        <p class="date">Fall 2025</p>
+        <div class="project-stats">
+          <span class="stat-badge">🤖 Underactuated Design</span>
+          <span class="stat-badge">⚙️ Asymmetric Fingers</span>
+          <span class="stat-badge">📏 Sub-1mm Capability</span>
+          <span class="stat-badge">🔄 Passive Mode Switching</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>Designed and prototyped an innovative underactuated robotic hand capable of grasping objects ranging from sub-1mm thin items to larger objects requiring three-point contact. Based on research by Tetsuyou Watanabe, the design features asymmetric finger structures that enable passive mode switching between parallel-grip and turn-over configurations without sensors or complex control algorithms.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Challenge</h2>
+        <p>Manipulation of small-sized objects (less than 1mm thick, under 1 gram) from flat surfaces presents unique challenges—conventional grippers often flick objects away rather than grasping them. The design needed to handle both extremely small objects and larger items using a single actuator while maintaining simplicity and reliability.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Solution</h2>
+        <p>Developed an asymmetric dual-finger design actuated by a single prismatic joint. The right finger features a sharp scooping tip that slides beneath thin objects and passively rotates via torsion spring to approximately 30 degrees during turn-over mode. The left finger employs a six-bar linkage mechanism that adaptively adjusts its grasping surface based on contact with flat surfaces, rotating to match the scooping finger angle. This configuration addresses the challenge of one finger lifting while the other restrains from above, preventing object ejection.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Technical Details</h2>
+        <ul>
+          <li><strong>Actuation:</strong> Single prismatic joint driving symmetric opening/closing motion</li>
+          <li><strong>Mobility:</strong> 1 actuated DOF + 1 passive DOF = 2 total DOF (underactuated system)</li>
+          <li><strong>Right Finger:</strong> Scooping mechanism with passive 30° rotation, torsion spring return, mechanical pin stop</li>
+          <li><strong>Left Finger:</strong> Six-bar linkage with slotted prismatic joint for controlled grasping surface rotation</li>
+          <li><strong>System:</strong> 15 links, 19 revolute joints, 2 prismatic joints</li>
+          <li><strong>Grasping Modes:</strong> Parallel-grip mode (max range 12.767&nbsp;cm) and turn-over mode (max range 8.486&nbsp;cm)</li>
+          <li><strong>Manufacturing:</strong> 3D printed in PLA with custom bolts, locking washers, and spacers</li>
+          <li><strong>Analysis:</strong> Forward kinematics derived for right finger, workspace characterization for both modes</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Design Evolution</h2>
+        <ol>
+          <li>Hand-sketched initial mechanism concepts and link length calculations</li>
+          <li>Manual measurements and configuration planning before CAD modeling</li>
+          <li>First prototype (blue PLA): Revealed fingertip design flaws and excessive joint tolerance</li>
+          <li>Complete redesign of right finger with optimized geometry</li>
+          <li>Final prototype (white PLA): Custom 3D printed bolts with cylindrical studs, locking washers, and custom spacers to reduce play and improve rigidity</li>
+          <li>Iterative refinement achieving reliable grasping performance</li>
+        </ol>
+      </div>
+
+      <div class="project-section">
+        <h2>Key Innovations</h2>
+        <ul>
+          <li>Asymmetric finger design enabling functional specialization</li>
+          <li>Passive mode switching through mechanical compliance</li>
+          <li>Single actuator simplicity (reduced cost, no sensors needed)</li>
+          <li>Adaptive grasping without grasp planning algorithms</li>
+          <li>Extended capability beyond original design through beneficial rotation for three-point contact</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Results</h2>
+        <ul>
+          <li>✅ Successfully demonstrated dual-mode grasping capability</li>
+          <li>✅ Achieved sub-1mm object manipulation through turn-over mode</li>
+          <li>✅ Extended to larger objects via three-point contact</li>
+          <li>✅ Passive adaptation without sensors or complex control</li>
+          <li>✅ Significant improvement from first to final prototype</li>
+          <li>✅ Complete kinematic analysis and workspace characterization</li>
+          <li>📹 Video demonstration: <a href="https://youtube.com/shorts/55B5EJ3fB7A" target="_blank" rel="noopener">youtube.com/shorts/55B5EJ3fB7A</a></li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Image Gallery</h2>
+        <div class="project-gallery two-column">
+          <!-- Sketches first -->
+          <div class="gallery-item">
+            <img src="images/project-gripper-1.jpg" alt="Physical gripper prototype and hand-drawn sketch">
+            <p class="caption">Fig.1: Physical gripper prototype and hand-drawn sketch</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-gripper-10.jpg" alt="Sketches of the right finger">
+            <p class="caption">Fig.2: Sketches of the right finger</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-gripper-11.jpg" alt="Simplification of right finger for calculation purposes">
+            <p class="caption">Fig.3: Simplification of right finger for calculation purposes</p>
+          </div>
+
+          <!-- CAD model (rotated) -->
+          <div class="gallery-item gallery-item-rotated">
+            <div class="rotated-image-wrapper">
+              <img src="images/project-gripper-2.jpg" class="gallery-img-rotate-ccw" alt="CAD model - complete gripper assembly">
+            </div>
+            <p class="caption">Fig.4: CAD model of the gripper</p>
+          </div>
+
+          <!-- Prototypes: first, then final (parallel then actuated) -->
+          <div class="gallery-item">
+            <img src="images/project-gripper-6.jpg" alt="First prototype (blue PLA)">
+            <p class="caption">Fig.5: First prototype (blue PLA)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-gripper-7.jpg" alt="Final prototype (white PLA)">
+            <p class="caption">Fig.6: Final prototype (white PLA)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-gripper-9.jpg" alt="Final gripper in parallel mode">
+            <p class="caption">Fig.7: Final gripper in parallel mode</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-gripper-8.jpg" alt="Final gripper in actuated mode">
+            <p class="caption">Fig.8: Final gripper in actuated mode</p>
+          </div>
+
+          <!-- Fingers: left then right, each unactuated then actuated -->
+          <div class="gallery-item">
+            <img src="images/project-gripper-12.jpg" alt="Left finger in parallel mode">
+            <p class="caption">Fig.9: Left finger in parallel mode (unactuated)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-gripper-5.jpg" alt="Left finger in scooping mode">
+            <p class="caption">Fig.10: Left finger in scooping mode (actuated)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-gripper-3.jpg" alt="Right finger in parallel mode">
+            <p class="caption">Fig.11: Right finger in parallel mode (unactuated)</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/project-gripper-4.jpg" alt="Right finger in scooping mode">
+            <p class="caption">Fig.12: Right finger in scooping mode (actuated)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Skills Used</h2>
+        <div class="project-skills">
+          <span class="skill-tag">Mechanical Design</span>
+          <span class="skill-tag">Kinematics Analysis</span>
+          <span class="skill-tag">Underactuated Systems</span>
+          <span class="skill-tag">Mechanism Design</span>
+          <span class="skill-tag">SolidWorks CAD</span>
+          <span class="skill-tag">3D Printing</span>
+          <span class="skill-tag">Iterative Prototyping</span>
+          <span class="skill-tag">Linkage Synthesis</span>
+          <span class="skill-tag">Workspace Analysis</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Technical References</h2>
+        <p>Based on: T. Watanabe et al., “Variable-Grasping-Mode Gripper With Different Finger Structures For Grasping Small-Sized Items,” <em>IEEE Robotics and Automation Letters</em>, 2021.</p>
+      </div>
+
+      <nav class="project-nav" aria-label="Project navigation">
+        <a href="project-patient-monitoring.html">← Previous Project</a>
+        <a href="project-kit-car.html">Next Project →</a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Image lightbox for gallery -->
+  <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+    <div class="image-lightbox-inner" role="dialog" aria-modal="true" aria-label="Expanded gallery image">
+      <button class="image-lightbox-close" type="button" aria-label="Close image viewer">✕</button>
+      <div class="image-lightbox-body">
+        <button class="image-lightbox-nav image-lightbox-prev" type="button" aria-label="Previous image">‹</button>
+        <div class="image-lightbox-media">
+          <img class="image-lightbox-image" src="" alt="">
+          <p class="image-lightbox-caption"></p>
+        </div>
+        <button class="image-lightbox-nav image-lightbox-next" type="button" aria-label="Next image">›</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Nicola Kunz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year and mobile nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('is-open');
+      this.setAttribute(
+        'aria-label',
+        document.querySelector('.nav-menu').classList.contains('is-open') ? 'Close menu' : 'Open menu'
+      );
+      this.textContent = document.querySelector('.nav-menu').classList.contains('is-open') ? '✕' : '☰';
+    });
+
+    // Image lightbox for gallery
+    (function() {
+      const galleryImages = Array.from(document.querySelectorAll('.project-gallery img'));
+      const lightbox = document.getElementById('image-lightbox');
+      if (!galleryImages.length || !lightbox) return;
+
+      const lightboxImage = lightbox.querySelector('.image-lightbox-image');
+      const lightboxCaption = lightbox.querySelector('.image-lightbox-caption');
+      const closeButton = lightbox.querySelector('.image-lightbox-close');
+      const prevButton = lightbox.querySelector('.image-lightbox-prev');
+      const nextButton = lightbox.querySelector('.image-lightbox-next');
+
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        const img = galleryImages[currentIndex];
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt || '';
+        const captionEl = img.closest('.gallery-item') && img.closest('.gallery-item').querySelector('.caption');
+        lightboxCaption.textContent = captionEl ? captionEl.textContent : '';
+
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function showNext(delta) {
+        const total = galleryImages.length;
+        currentIndex = (currentIndex + delta + total) % total;
+        openLightbox(currentIndex);
+      }
+
+      galleryImages.forEach((img, index) => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => openLightbox(index));
+      });
+
+      closeButton.addEventListener('click', closeLightbox);
+      prevButton.addEventListener('click', () => showNext(-1));
+      nextButton.addEventListener('click', () => showNext(1));
+
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (event.key === 'Escape') {
+          closeLightbox();
+        } else if (event.key === 'ArrowRight') {
+          showNext(1);
+        } else if (event.key === 'ArrowLeft') {
+          showNext(-1);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

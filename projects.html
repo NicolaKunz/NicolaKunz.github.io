@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Nicola Kunz - Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Engineering projects by Nicola Kunz: patient monitoring, robotic gripper, kit car build, and fixture design.">
+  <meta name="keywords" content="engineering projects, medical devices, robotics, mechatronics, Nicola Kunz">
+  <meta property="og:title" content="Projects | Nicola Kunz">
+  <meta property="og:description" content="A selection of engineering work spanning medical devices, robotics, and precision manufacturing.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="site-logo">Nicola Kunz</a>
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="lead">A selection of my engineering work spanning medical devices, robotics, and precision manufacturing.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="projects-grid large-cards">
+          <!-- Most recent first: 2026 -->
+          <article class="project-card">
+            <div class="project-card-image">
+              <img src="images/project-monitoring-5.jpg" alt="Group photo from the Nordic Semiconductor IoT Hackathon">
+            </div>
+            <div class="project-card-body">
+              <h3>Patient Monitoring System - 1st Place Winner</h3>
+              <p>IoT-based patient monitoring with real-time sensor integration.</p>
+              <div class="project-card-footer">
+                <a href="project-patient-monitoring.html" class="btn btn-primary">Learn More</a>
+                <span class="project-date">Completed 2026</span>
+              </div>
+            </div>
+          </article>
+          <!-- Fall 2025 projects -->
+          <article class="project-card">
+            <div class="project-card-image">
+              <img src="images/project-gripper-2.jpg" alt="Variable-grasping-mode underactuated robotic hand - CAD model">
+            </div>
+            <div class="project-card-body">
+              <h3>Underactuated Robotic Gripper</h3>
+              <p>6-bar linkage mechanism achieving 0.5mm precision.</p>
+              <div class="project-card-footer">
+                <a href="project-robotic-gripper.html" class="btn btn-primary">Learn More</a>
+                <span class="project-date">Completed Fall 2025</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card-image">Image Placeholder</div>
+            <div class="project-card-body">
+              <h3>Forward Dynamic Simulation of Planar 3R Robot Arm</h3>
+              <p>MATLAB-based dynamics and chaotic motion analysis.</p>
+              <div class="project-card-footer">
+                <a href="project-3r-pendulum.html" class="btn btn-primary">Learn More</a>
+                <span class="project-date">Completed Fall 2025</span>
+              </div>
+            </div>
+          </article>
+          <!-- Oldest: 2020 -->
+          <article class="project-card">
+            <div class="project-card-image">
+              <img src="images/project-car-8.jpg" alt="Factory 5 Mk4 Roadster front three-quarter view">
+            </div>
+            <div class="project-card-body">
+              <h3>Factory 5 Mk4 Roadster</h3>
+              <p>Complete automotive build with custom electrical systems.</p>
+              <div class="project-card-footer">
+                <a href="project-kit-car.html" class="btn btn-primary">Learn More</a>
+                <span class="project-date">Completed May 2020</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Nicola Kunz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('is-open');
+      this.setAttribute('aria-label', document.querySelector('.nav-menu').classList.contains('is-open') ? 'Close menu' : 'Open menu');
+      this.textContent = document.querySelector('.nav-menu').classList.contains('is-open') ? '✕' : '☰';
+    });
+  </script>
+</body>
+</html>
