@@ -461,6 +461,7 @@ section {
   align-items: center;
   justify-content: center;
   color: #e5e7eb;
+  margin-top: 1.25rem;
   margin-bottom: 2rem;
   border-radius: var(--radius-lg);
   overflow: hidden;
