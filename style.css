@@ -212,30 +212,77 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   Hero (Homepage)
+   Hero (Homepage) - animated gradient with geometric overlay
    -------------------------------------------------------------------------- */
 .hero {
-  padding: 4rem 0 5rem;
+  position: relative;
+  padding: 4.5rem 0 5.5rem;
   text-align: center;
+  color: #f9fafb;
+  background: radial-gradient(circle at top left, #1d4ed8 0, #0b1120 38%, #020617 100%);
+  background-size: 160% 160%;
+  animation: hero-gradient-shift 24s ease-in-out infinite alternate;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Subtle geometric grid overlay */
+.hero::before {
+  background-image:
+    linear-gradient(
+      rgba(148, 163, 184, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.12) 1px,
+      transparent 1px
+    );
+  background-size: 120px 120px, 120px 120px;
+  opacity: 0.65;
+  mix-blend-mode: soft-light;
+}
+
+/* Soft moving highlight / wave effect */
+.hero::after {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.17), transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.18), transparent 55%);
+  opacity: 0.9;
+  transform: translate3d(0, 0, 0);
+  animation: hero-waves 32s ease-in-out infinite alternate;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.25rem, 5vw, 3.2rem);
   font-weight: 700;
-  margin: 0 0 0.5rem;
-  color: var(--color-text);
+  margin: 0 0 0.75rem;
+  color: #f9fafb;
 }
 
 .hero .subheading {
   font-size: 1.25rem;
-  color: var(--color-text-muted);
+  color: rgba(226, 232, 240, 0.92);
   margin: 0 0 1.5rem;
 }
 
 .hero .intro {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  font-size: 1.1rem;
+  max-width: 640px;
+  margin: 0 auto 2.25rem;
+  font-size: 1.05rem;
+  color: rgba(226, 232, 240, 0.9);
 }
 
 .hero-buttons {
@@ -243,6 +290,33 @@ section {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+}
+
+@keyframes hero-gradient-shift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+@keyframes hero-waves {
+  0% {
+    transform: translate3d(-4%, -2%, 0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(3%, 4%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(6%, -3%, 0);
+    opacity: 0.9;
+  }
 }
 
 /* --------------------------------------------------------------------------
