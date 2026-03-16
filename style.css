@@ -481,6 +481,14 @@ section {
   max-width: none;
 }
 
+/* Edge-to-edge hero for specific projects (remove left/right white gutters) */
+.project-hero-image--edge {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  width: calc(100% + 3rem);
+  border-radius: 0;
+}
+
 /* 3/4-width and 1/2-width variants previously added have been normalized back
    to full-width images to remove left/right white space while keeping layout
    consistent across all project headers. */
