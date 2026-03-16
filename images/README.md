@@ -40,13 +40,21 @@ Add the following image files to this folder. The site uses placeholder divs unt
 - project-car-7.jpg, project-car-8.jpg – Optional detail shots
 
 ### 3R Pendulum Dynamics Simulation (project-3r-pendulum.html)
-- pendulum-sim-1.gif – Simulation animation (planar 3R arm falling)
-- pendulum-sim-2.jpg – Screenshot of MATLAB simulation at t = 2.38 s
-- pendulum-sim-3.jpg – Hand calculations (Lagrangian derivation)
-- pendulum-sim-4.jpg – Energy conservation plots
-- pendulum-sim-5.jpg – Joint angle trajectory visualization
-- pendulum-sim-6.jpg – MATLAB code overview
-- pendulum-sim-7.jpg – Additional state-space or phase plots
+- pendulum-sim-1.jpg  – Simulation graph of planar 3R pendulum motion
+- pendulum-sim-2.jpg  – MATLAB code for 3R pendulum dynamics – part 1
+- pendulum-sim-3.jpg  – MATLAB code for 3R pendulum dynamics – part 2
+- pendulum-sim-4.jpg  – MATLAB code for 3R pendulum dynamics – part 3
+- pendulum-sim-5.jpg  – MATLAB code for 3R pendulum dynamics – part 4
+- pendulum-sim-6.jpg  – MATLAB code for 3R pendulum dynamics – part 5
+- pendulum-sim-7.jpg  – Hand calculations for 3R pendulum dynamics – page 1
+- pendulum-sim-8.jpg  – Hand calculations for 3R pendulum dynamics – page 2
+- pendulum-sim-9.jpg  – Hand calculations for 3R pendulum dynamics – page 3
+- pendulum-sim-10.jpg – Hand calculations for 3R pendulum dynamics – page 4
+- pendulum-sim-11.jpg – Hand calculations for 3R pendulum dynamics – page 5
+- pendulum-sim-12.jpg – Hand calculations for 3R pendulum dynamics – page 6
+- pendulum-sim-13.jpg – Hand calculations for 3R pendulum dynamics – page 7
+- pendulum-sim-14.jpg – Hand calculations for 3R pendulum dynamics – page 8
+- pendulum-sim-15.jpg – Hand calculations for 3R pendulum dynamics – page 9
 
 ## Replacing placeholders in HTML
 
