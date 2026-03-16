@@ -469,17 +469,16 @@ section {
 
 .project-hero-image img {
   width: 100%;
-  max-height: 420px;
-  height: 100%;
+  max-width: 720px;
+  height: auto;
   display: block;
   vertical-align: middle;
-  object-fit: cover;
   border-radius: var(--radius);
 }
 
 @media (max-width: 640px) {
   .project-hero-image img {
-    max-height: 260px;
+    max-width: 100%;
   }
 }
 
