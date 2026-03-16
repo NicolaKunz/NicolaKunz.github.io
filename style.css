@@ -481,26 +481,9 @@ section {
   max-width: none;
 }
 
-/* 3/4-width hero variant (e.g. Mk4 Roadster) */
-.project-hero-image--three-quarter img {
-  max-width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 1/2-width hero variant (e.g. 3R pendulum) */
-.project-hero-image--half img {
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Reduce extra white space around smaller hero variants */
-.project-hero-image--three-quarter,
-.project-hero-image--half {
-  margin-top: 0.75rem;
-  margin-bottom: 1rem;
-}
+/* 3/4-width and 1/2-width variants previously added have been normalized back
+   to full-width images to remove left/right white space while keeping layout
+   consistent across all project headers. */
 
 @media (max-width: 640px) {
   .project-hero-image img {
