@@ -467,13 +467,20 @@ section {
   color: #e5e7eb;
 }
 
-/* Show full image without cropping; height follows image */
 .project-hero-image img {
   width: 100%;
-  height: auto;
+  max-height: 420px;
+  height: 100%;
   display: block;
   vertical-align: middle;
+  object-fit: cover;
   border-radius: var(--radius);
+}
+
+@media (max-width: 640px) {
+  .project-hero-image img {
+    max-height: 260px;
+  }
 }
 
 .project-title-block {
