@@ -656,12 +656,13 @@ section {
 /* Extra spacing below rotated image so caption never overlaps */
 .project-gallery.two-column .gallery-item-rotated .caption {
   margin-top: 1.5rem;
+  text-align: center;
 }
 
 /* Smaller image variant for selected gripper figures (5, 6, 9–12) */
 .project-gallery.two-column img.gallery-img-small {
-  width: 80%;
-  max-width: 80%;
+  width: 70%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
