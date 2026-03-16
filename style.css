@@ -629,7 +629,7 @@ section {
   transform: rotate(-90deg);
   transform-origin: center center;
   display: block;
-  max-width: 70%;
+  max-width: 60%;
 }
 
 /* Wrapper for rotated image to control spacing */
@@ -640,13 +640,13 @@ section {
   align-items: center;
   margin: 1.5rem 0 0;
   min-height: 200px;
-  padding-bottom: 3.25rem;
+  padding-bottom: 4rem;
 }
 
 /* Ensure gallery item with rotated image has enough vertical space for caption */
 .project-gallery.two-column .gallery-item-rotated {
   min-height: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -665,6 +665,12 @@ section {
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Extra-small variant (e.g. figs 11–12) */
+.project-gallery.two-column img.gallery-img-small-65 {
+  width: 65%;
+  max-width: 65%;
 }
 
 /* Image lightbox (click-to-zoom gallery) */
