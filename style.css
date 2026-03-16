@@ -481,6 +481,20 @@ section {
   max-width: none;
 }
 
+/* 3/4-width hero variant (e.g. Mk4 Roadster) */
+.project-hero-image--three-quarter img {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 1/2-width hero variant (e.g. 3R pendulum) */
+.project-hero-image--half img {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 640px) {
   .project-hero-image img {
     max-width: 100%;
