@@ -653,9 +653,9 @@ section {
   align-items: center;
 }
 
-/* Extra spacing below rotated image so caption never overlaps */
+/* Caption under rotated image: align spacing with other captions */
 .project-gallery.two-column .gallery-item-rotated .caption {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   text-align: center;
 }
 
